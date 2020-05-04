@@ -59,17 +59,13 @@ for i = lambdaAll
             endif 
             %}
             total_arrivals = total_arrivals + 1;
-            try % to catch the exception if variable arrivals(i) is undefined. Required only for systems with finite capacity.
+            % to catch the exception if variable arrivals(i) is undefined. Required only for systems with finite capacity.
             x = arrivals(current_state + 1) + 1
             arrivals(current_state + 1) = x; % increase the number of arrivals in the current state
-            current_state = current_state + 1;
-            catch
-            if i == 10
-                arrivals(current_state) = arrivals(current_state) + 1 ;
+            if (current_state != 10) 
+                current_state = current_state + 1;
             endif
-            %current_state = current_state + 1;
-            end
-        else % departure
+            else % departure
             %{
             if 0 < my_i < 31
                 traceMatr(my_i,5) = 1
