@@ -7,10 +7,10 @@ lambda = 1;
 m1 = 0.8;
 m2 = 0.4;
 
-threshold_1a = ____________________;
-threshold_1b = ____________________;
-threshold_2_first = _______________________;
-threshold_2_second = _______________________;
+threshold_1a = lambda/(lambda +m1);
+threshold_1b = lambda / (lambda +m2);
+threshold_2_first = lambda/ (lambda + m1 + m2);
+threshold_2_second = (lambda + m1) / (lambda + m1 + m2);
 
 current_state = 0;
 arrivals = zeros(1,4);
@@ -79,3 +79,19 @@ display(P(1));
 display(P(2));
 display(P(3));
 display(P(4));
+
+figure(1);
+hold on;
+title("Bar of Probabilities per state")
+xlabel("State")
+ylabel("Probability")
+bar([0,1,2], [P(1),P(2)+P(3),P(4)], "b", 0.5);
+xticks ([0,1,2]);
+grid on;
+saveas (1, "figures/figureCallingCenter.png")
+hold off;
+
+clc;
+clear all;
+close all;
+exit;
