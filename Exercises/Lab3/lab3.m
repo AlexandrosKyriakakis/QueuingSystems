@@ -19,7 +19,9 @@ transitions = 0; % holds the transitions of the simulation in transitions steps
 
 while transitions >= 0
   transitions = transitions + 1; % one more transitions step
+  traceMatr = [];
   if (counter < 30)
+    traceMatr[]
     disp(counter);
     disp(current_state);
     disp(arrivals(current_state + 1)); 
