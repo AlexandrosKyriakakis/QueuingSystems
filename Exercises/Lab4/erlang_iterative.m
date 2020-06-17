@@ -33,6 +33,7 @@ while P>0.01
     lines++;
 endwhile
 display(lines);
+
 clc;
 clear all;
 close all;

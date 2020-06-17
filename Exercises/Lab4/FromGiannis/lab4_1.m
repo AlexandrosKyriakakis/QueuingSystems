@@ -1,7 +1,6 @@
 clc;
 clear all;
 close all;
-
 lambda = 1;
 mu = 1/4;
 states = [0, 1, 2, 3, 4, 5 ,6 ,7 ,8]; % system with capacity 4 states
