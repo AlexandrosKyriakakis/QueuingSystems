@@ -2,4 +2,4 @@
 
 # Alexandros Kyriakakis
 
-### special credits to [Ioannis Alexopoulos](https://github.com/galexo)
+### \#special credits to [Ioannis Alexopoulos](https://github.com/galexo)
